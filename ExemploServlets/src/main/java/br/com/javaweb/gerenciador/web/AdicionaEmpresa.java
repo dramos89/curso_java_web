@@ -3,6 +3,7 @@ package br.com.javaweb.gerenciador.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ import br.com.javaweb.gerenciador.dao.EmpresaDAO;
 /**
  * Servlet implementation class AdicionaEmpresa
  */
-@WebServlet("/adiciona")
+@WebServlet("/adicionaEmpresa")
 public class AdicionaEmpresa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -47,18 +48,21 @@ public class AdicionaEmpresa extends HttpServlet {
 		//doGet(request, response);
 		
 		//adicionar(request.getParameter("nome"));
-
-		PrintWriter out = response.getWriter();
-		
-		out.println("<html><body>Empresa "+adicionar(request.getParameter("nome"))+" adicionada com sucesso.");
-	}
+	//capturando o valor do campo da pagina JSP
+	Empresa empresa = adicionar(request.getParameter("nome"));
+	//setando valor para um atributo da pagina JSP
+	request.setAttribute("empresa", empresa.getNome());
 	
-	private String adicionar(String parametro){
+	RequestDispatcher disp = request.getRequestDispatcher("/WEB-INF/paginas/novaEmpresa.jsp");
+	disp.forward(request, response);
+	}	
+	
+	private Empresa adicionar(String parametro){
 		Empresa novaEmpresa = new Empresa(parametro);
 		
 		EmpresaDAO dao = new EmpresaDAO();
 		dao.adiciona(novaEmpresa);
-		return novaEmpresa.getNome();
+		return novaEmpresa;
 	}
 	
 	

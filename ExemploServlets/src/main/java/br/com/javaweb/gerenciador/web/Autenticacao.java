@@ -3,6 +3,7 @@ package br.com.javaweb.gerenciador.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -50,14 +51,15 @@ public class Autenticacao extends HttpServlet {
 		//PrintWriter writer = response.getWriter();
 		UsuarioDAO usu = new UsuarioDAO();
 		Usuario usuario = usu.buscaPorEmailESenha(email, senha);
-		
+		RequestDispatcher dispatcher;
 		if (usuario != null){
 			HttpSession session = request.getSession();
 			session.setAttribute("usuario.logado", usuario);
-			response.sendRedirect("/ExemploServlets/index.html");
+		    dispatcher = request.getRequestDispatcher("WEB-INF/paginas/index.jsp");
 		} else {
-			response.sendRedirect("/ExemploServlets/erro.html");
+			dispatcher = request.getRequestDispatcher("WEB-INF/paginas/erro.html");
 		}	
+		dispatcher.forward(request, response);
 			
 	}
 
