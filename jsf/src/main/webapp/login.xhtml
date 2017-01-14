@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui">  
+  
+    <h:head>  
+  
+    </h:head>  
+      
+    <h:body>  
+      	<h:form>
+         <p:outputLabel value="Login "/>
+       	 <p:inputText id="login" value="#{loginMB.login}"/>
+       	 <p:outputLabel value="Senha "/>
+       	 <p:password id="pass" value="#{loginMB.pass}"/>
+       	 <p:commandButton value="Entrar" action="#{loginMB.doLogin}" update="resultado"/>
+       	 <p:outputPanel id="resultado">
+       	 Resultado: #{loginMB.result}
+       	 </p:outputPanel>
+        </h:form>
+    </h:body>  
+</html>  
