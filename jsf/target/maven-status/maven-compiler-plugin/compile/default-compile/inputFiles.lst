@@ -1,3 +1,11 @@
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/validator/CPFValidator.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/UsuariosMB.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/loginDAO.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/domain/Usuario.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/converter/UsuarioConverter.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/FacesUtils.java
 /home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/TesteServlet.java
 /home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/LoggerFilter.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/LoginMB.java
 /home/java01/dextraining-jsf/src/main/java/br/com/dextraining/web/controller/InitMB.java
+/home/java01/dextraining-jsf/src/main/java/br/com/dextraining/domain/UsuarioService.java

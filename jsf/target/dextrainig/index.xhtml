@@ -8,10 +8,9 @@
     </h:head>  
       
     <h:body>  
-      
-        <p:spinner />  
-        <p:outputPanel>
-        	#{initMB.nome}
-        </p:outputPanel>  
+      	<h:form>
+       	 <p:inputText id="campoTexto" value="#{initMB.nome}"/>
+       	 <p:commandButton value="Salvar" action="#{initMB.salvar}" update="campoTexto"/>
+        </h:form>
     </h:body>  
 </html>  

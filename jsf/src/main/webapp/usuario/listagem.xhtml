@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="/layout.xhtml">
+
+
+	<ui:define name="conteudo">
+		<h:form id="formLogin" prependId="false">
+			<p:growl id="growl" showDetail="false" />
+			<p:outputLabel>Usuários</p:outputLabel>
+			<p:dataTable var="usuario" value="#{usuarioMB.usuarios}">
+				<p:column headerText="Login">
+					<h:outputText value="#{usuario.login}" />
+				</p:column>
+			</p:dataTable>
+			<p:commandButton value="Novo" action="#{usuarioMB.irParaNovoUsuario}" />
+			<p:panel>
+				<p:outputLabel for="usuario" value="Usuario: " />
+				<p:selectOneMenu id="usuario" value="#{usuarioMB.usuario}">
+					<f:selectItem itemLabel="Select One" itemValue="" />
+					<f:selectItems value="#{usuarioMB.usuarios}" var="usuario"
+						itemLabel="#{usuario.login}" />
+				</p:selectOneMenu>
+				<p:commandButton value="Mostrar Senha"
+					action="#{usuarioMB.mostrarSenha}" update="painelSenha" />
+				<p:outputPanel id="painelSenha">
+					Senha: #{usuarioMB.usuario.senha}
+				</p:outputPanel>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+
+

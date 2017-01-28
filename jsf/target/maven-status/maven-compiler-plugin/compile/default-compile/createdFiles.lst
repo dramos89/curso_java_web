@@ -1,3 +1,11 @@
-br/com/dextraining/web/controller/TesteServlet.class
+br/com/dextraining/web/controller/FacesUtils.class
+br/com/dextraining/web/controller/loginDAO.class
 br/com/dextraining/web/controller/InitMB.class
+br/com/dextraining/domain/UsuarioService.class
+br/com/dextraining/domain/Usuario.class
 br/com/dextraining/web/controller/LoggerFilter.class
+br/com/dextraining/web/controller/UsuariosMB.class
+br/com/dextraining/web/controller/LoginMB.class
+br/com/dextraining/web/converter/UsuarioConverter.class
+br/com/dextraining/web/validator/CPFValidator.class
+br/com/dextraining/web/controller/TesteServlet.class

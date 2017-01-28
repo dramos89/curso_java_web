@@ -1,39 +1,56 @@
 package br.com.dextraining.web.controller;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
-@ManagedBean(name="loginMB")
+import br.com.dextraining.domain.Usuario;
+import br.com.dextraining.domain.UsuarioService;
+
+@ManagedBean
+@SessionScoped
 public class LoginMB {
-	private String login;
-	private String pass;
-	private String result;
-	
-	public String getLogin() {
-		return login;
+
+	private Usuario usuario = new Usuario();
+
+	private boolean logado;
+
+	private UsuarioService service = new UsuarioService();
+
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	
-	public void setLogin(String login) {
-		this.login = login;
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
-	
-	public String getPass() {
-		return pass;
+
+	public boolean isLogado() {
+		return logado;
 	}
-	
-	public void setPass(String pass) {
-		this.pass = pass;
+
+	public void setLogado(boolean logado) {
+		this.logado = logado;
 	}
-	
-	public String getResult() {
-		return result;
+
+	public void login() {
+		this.logado = UsuarioService.logar(this.usuario);
+		if (this.logado) {
+			FacesUtils.redirect("usuario/listagem.jsf");
+		}
 	}
-	
-	public void setResult(String result) {
-		this.result = result;
+
+	public String logout() {
+		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+		return "/login.jsf?faces-redirect=true";
 	}
-	
-	public void doLogin(){
-		this.result = new loginDAO().doLogin(this.getLogin(), this.getPass());
+
+	public void assertLogged() {
+		if (!isLogado()) {
+			FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+			FacesUtils.createErrorMessage("Usuario Nao Logado");
+			FacesUtils.redirect("/login.jsf");
+		}
 	}
-	
+
 }

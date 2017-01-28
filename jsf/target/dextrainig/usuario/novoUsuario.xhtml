@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    template="/layout.xhtml">
+
+	
+    <ui:define name="conteudo">
+      	<h:form id="formUsuario" prependId="false">
+    	<p:growl id="growl" showDetail="true" /> 
+    	<p:fieldset legend="Novo Usuário">
+       	 <p:panel>
+       	 <p:outputLabel>Login:</p:outputLabel><p:inputText label="Nome do Usuario" id="login" value="#{usuarioMB.usuario.login}" required="true" />
+       	 </p:panel>
+       	 <p:panel>
+       	 <p:outputLabel>Senha:</p:outputLabel><p:password id="senha" value="#{usuarioMB.usuario.senha}"  required="true"/>
+      	 </p:panel>
+       	 <p:commandButton id="botaoSalvar" value="Salvar" action="#{usuarioMB.salvar}"/>
+       	 <p:commandButton id="botaoVoltar" value="Voltar" immediate="true" action="listagem.jsf?faces-redirect=true"/>
+       	 </p:fieldset>
+
+        </h:form>
+</ui:define></ui:composition>  
