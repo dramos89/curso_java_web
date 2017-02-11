@@ -1,0 +1,23 @@
+package br.com.dextra.treinamento.controller.bean;
+
+import javax.annotation.security.RolesAllowed;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "testarJAASMB")
+@SessionScoped
+public class TestarJAASMB {
+
+	public String testarComRedirect() {
+		return "jaas/com_restricao/paginaComRestricao.xhtml?faces-redirect=true";
+	}
+	
+	public String testarSemRedirect() {
+		return "jaas/com_restricao/paginaComRestricao.xhtml";
+	}
+	
+	@RolesAllowed("manager")
+	public String testarSemRedirectRolesAllowed() {
+		return "jaas/com_restricao/paginaComRestricao.xhtml";
+	}
+}

@@ -1,0 +1,9 @@
+package br.com.dextra.treinamento.model.service.webservice;
+
+import java.rmi.Remote;
+
+public interface TesteWebServiceInterface extends Remote {
+
+	void servicoInvocado();
+
+}

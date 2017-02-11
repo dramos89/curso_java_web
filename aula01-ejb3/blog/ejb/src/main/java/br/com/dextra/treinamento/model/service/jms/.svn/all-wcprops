@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/jms
+END
+TesteJMSImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/jms/TesteJMSImpl.java
+END
+ConsumidorTopic.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/jms/ConsumidorTopic.java
+END
+ConsumidorQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/jms/ConsumidorQueue.java
+END
+TesteJMSLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/jms/TesteJMSLocal.java
+END

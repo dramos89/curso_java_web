@@ -1,0 +1,30 @@
+package br.com.dextra.treinamento.model.service.interceptor;
+
+import javax.ejb.Stateless;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.InvocationContext;
+
+@Stateless
+public class TesteInterceptorServiceImpl implements
+		TesteInterceptorServiceLocal {
+
+	public void metodo() {
+		System.out.println("O metodo foi invocado");
+
+		// Simulando que fez alguma coisa
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	@AroundInvoke
+	public Object mdbInterceptor(InvocationContext invCtx) throws Exception {
+		System.out.println("*** Interceptando as chamadas dos metodos ***");
+		System.out.println("Interceptador Interno - Execucao previa ...");
+		Object flow = invCtx.proceed();
+		System.out.println("Interceptador Interno - Execucao posterior ...");
+		return flow;
+	}
+}

@@ -1,0 +1,13 @@
+package br.com.dextra.treinamento.model.service.timer;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.ejb.Local;
+
+@Local
+public interface TesteTimerServiceLocal {
+
+	void scheduleExecution(Date timeout, Serializable param);
+
+}

@@ -1,0 +1,45 @@
+package br.com.dextra.treinamento.controller.bean;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import br.com.dextra.treinamento.model.service.transaction.TesteTransactionServiceLocal;
+
+@ManagedBean(name = "testarTransactionMB")
+@SessionScoped
+public class TestarTransactionMB {
+	
+	@EJB
+	private TesteTransactionServiceLocal testeTransactionService;
+
+	public void testarRequired() {
+		Long contadorInicial = testeTransactionService.getCountPost();
+		
+		try {
+			testeTransactionService.testarRequired();
+		} catch(Exception e) {
+			
+		}
+		
+		Long contadorFinal = testeTransactionService.getCountPost();
+		Long numeroInstanciasCriadas = contadorFinal - contadorInicial;
+		
+		System.out.println("Foram criadas " + numeroInstanciasCriadas + " instancias de Post");
+	}
+	
+	public void testarRequiresNew() {
+		Long contadorInicial = testeTransactionService.getCountPost();
+		
+		try {
+			testeTransactionService.testarRequiresNew();
+		} catch(Exception e) {
+			
+		}
+		
+		Long contadorFinal = testeTransactionService.getCountPost();
+		Long numeroInstanciasCriadas = contadorFinal - contadorInicial;
+		
+		System.out.println("Foram criadas " + numeroInstanciasCriadas + " instancias de Post");
+	}
+}

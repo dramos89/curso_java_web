@@ -1,0 +1,10 @@
+package br.com.dextra.treinamento.model.service.transaction;
+
+import javax.ejb.Local;
+
+@Local
+public interface SalvarComRequiredServiceLocal {
+
+	void criarPostTransactionRequired(String titulo);
+
+}

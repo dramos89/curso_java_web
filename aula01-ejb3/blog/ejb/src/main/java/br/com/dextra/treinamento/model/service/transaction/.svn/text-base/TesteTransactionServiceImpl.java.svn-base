@@ -1,0 +1,35 @@
+package br.com.dextra.treinamento.model.service.transaction;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Stateless
+public class TesteTransactionServiceImpl implements TesteTransactionServiceLocal {
+
+	@PersistenceContext
+	private EntityManager em;
+	
+	@EJB
+	private SalvarComRequiresNewServiceLocal salvarComRequiresNewService;
+	
+	@EJB
+	private SalvarComRequiredServiceLocal salvarComRequiredService;
+	
+	public void testarRequired() {
+		salvarComRequiredService.criarPostTransactionRequired("Titulo teste");
+		salvarComRequiredService.criarPostTransactionRequired(null);
+	}
+
+	public void testarRequiresNew() {
+		salvarComRequiresNewService.criarPostTransactionRequiresNew("Titulo teste");
+		salvarComRequiresNewService.criarPostTransactionRequiresNew(null);
+	}
+	
+	public Long getCountPost() {
+		String hql = "SELECT count(*) FROM Post";
+		Long contadorInicial = (Long) em.createQuery(hql).getSingleResult();
+		return contadorInicial;
+	}
+}

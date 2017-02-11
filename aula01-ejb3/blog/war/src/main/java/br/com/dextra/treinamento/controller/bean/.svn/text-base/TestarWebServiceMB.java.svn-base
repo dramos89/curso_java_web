@@ -1,0 +1,34 @@
+package br.com.dextra.treinamento.controller.bean;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.faces.bean.ManagedBean;
+import javax.xml.namespace.QName;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.ServiceFactory;
+
+import br.com.dextra.treinamento.model.service.webservice.TesteWebServiceInterface;
+
+@ManagedBean(name = "testarWebServiceMB")
+public class TestarWebServiceMB {
+
+	public void testarWebService() throws MalformedURLException, ServiceException {
+		String wsdlURL = "http://localhost:8080/blog-ejb-1.0-SNAPSHOT/TesteWebServiceImplService/TesteWebServiceImpl?wsdl";
+		String namespace = "http://service.model.treinamento.dextra.com.br";
+		String serviceName = "TesteWebServiceImplService";
+		String portName = "TesteWebServiceImplPort";
+		QName serviceQN = new QName(namespace, serviceName);
+
+		ServiceFactory serviceFactory = ServiceFactory.newInstance();
+		Service service = serviceFactory.createService(new URL(wsdlURL), serviceQN);
+		System.out.println("Criou o servico");
+		
+		TesteWebServiceInterface testeWebService = (TesteWebServiceInterface) service
+				.getPort(new QName(namespace, portName),
+						TesteWebServiceInterface.class);
+		
+		testeWebService.servicoInvocado();
+	}
+}

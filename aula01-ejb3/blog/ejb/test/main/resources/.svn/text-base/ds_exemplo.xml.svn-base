@@ -1,0 +1,13 @@
+<datasources>
+	<local-tx-datasource>
+		<jndi-name>BlogDS</jndi-name>
+		<connection-url>jdbc:postgresql://172.16.129.8:5434/ejbteste
+		</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<user-name>fab-user</user-name>
+		<password>fab</password>
+		<metadata>
+			<type-mapping>PostgreSQL 8.1</type-mapping>
+		</metadata>
+	</local-tx-datasource>
+</datasources>

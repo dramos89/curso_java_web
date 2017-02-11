@@ -1,0 +1,19 @@
+package br.com.dextra.treinamento.controller.bean;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import br.com.dextra.treinamento.model.service.interceptor.TesteInterceptorServiceLocal;
+
+@ManagedBean(name = "testarInterceptorMB")
+@SessionScoped
+public class TestarInterceptorMB {
+
+	@EJB
+	private TesteInterceptorServiceLocal testeInterceptorService;
+	
+	public void testarInterceptor() {
+		testeInterceptorService.metodo();
+	}
+}

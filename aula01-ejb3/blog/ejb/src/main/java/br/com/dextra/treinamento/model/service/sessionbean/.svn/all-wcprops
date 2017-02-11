@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean
+END
+TesteStatefulLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TesteStatefulLocal.java
+END
+TesteStatelessLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TesteStatelessLocal.java
+END
+TesteStatelessRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TesteStatelessRemote.java
+END
+TesteStatefulImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TesteStatefulImpl.java
+END
+TesteStatelessImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TesteStatelessImpl.java
+END

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:my="http://java.sun.com/jsf/composite/component">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Blog</title>
+    </h:head>
+    <h:body>
+        <h2>Listagem de posts</h2>
+        
+        <h:messages />
+        
+        <h:form>
+        	<h:dataTable value="#{listarPostsMB.posts}" var="post">
+        		<h:column>
+        			<f:facet name="header">
+        				<h:outputText value="Nome Post" />
+        			</f:facet>
+        			<h:outputText value="#{post.titulo}" />
+        		</h:column>
+        		<h:column>
+        			<f:facet name="header">
+        				<h:outputText value="Descricao Post" />
+        			</f:facet>
+        			<h:outputText value="#{post.descricao}" />
+        		</h:column>
+        		<h:column>
+        			<f:facet name="header">
+        				<h:outputText value="Data Post" />
+        			</f:facet>
+        			<h:outputText value="#{post.dataFormatada}" />
+        		</h:column>
+        		<h:column>        		
+        			<f:facet name="header">
+        				<h:outputText value="Operacoes" />
+        			</f:facet>
+        			
+					<h:commandButton id="btnAlterar"  value="Alterar" action="#{listarPostsMB.prepararAlteracao}">
+						<f:param name="titulo" value="#{post.titulo}" />
+						<f:param name="id" value="#{post.id}" />
+					</h:commandButton>        
+					
+					<h:commandButton id="btnExcluir"  value="Excluir" action="#{listarPostsMB.remover}" >
+						<f:param name="titulo" value="#{post.titulo}" />
+						<f:param name="id" value="#{post.id}" />
+					</h:commandButton>    					
+				</h:column>
+									
+        	</h:dataTable>
+        	
+        	<h:commandButton value="Incluir" action="#{listarPostsMB.incluir}" />
+        	<h:commandButton value="Voltar" action="#{listarPostsMB.voltar}" />
+        </h:form>
+        
+    </h:body>
+</html>

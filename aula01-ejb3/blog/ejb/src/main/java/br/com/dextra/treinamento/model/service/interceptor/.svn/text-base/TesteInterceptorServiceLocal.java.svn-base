@@ -1,0 +1,10 @@
+package br.com.dextra.treinamento.model.service.interceptor;
+
+import javax.ejb.Local;
+
+@Local
+public interface TesteInterceptorServiceLocal {
+
+	void metodo();
+
+}

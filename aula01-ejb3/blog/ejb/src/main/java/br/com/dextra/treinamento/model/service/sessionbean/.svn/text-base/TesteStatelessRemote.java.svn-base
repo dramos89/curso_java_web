@@ -1,0 +1,11 @@
+package br.com.dextra.treinamento.model.service.sessionbean;
+
+import java.io.Serializable;
+
+import javax.ejb.Remote;
+
+@Remote
+public interface TesteStatelessRemote extends Serializable {
+
+	public Integer adicionar();
+}

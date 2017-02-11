@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/war/src/main/webapp/WEB-INF
+END
+faces-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/war/src/main/webapp/WEB-INF/faces-config.xml
+END
+jboss-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/war/src/main/webapp/WEB-INF/jboss-web.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/war/src/main/webapp/WEB-INF/web.xml
+END
