@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction
+END
+SalvarComRequiredServiceLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/SalvarComRequiredServiceLocal.java
+END
+SalvarComRequiresNewServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/SalvarComRequiresNewServiceImpl.java
+END
+TesteTransactionServiceLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/TesteTransactionServiceLocal.java
+END
+SalvarComRequiredServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/SalvarComRequiredServiceImpl.java
+END
+SalvarComRequiresNewServiceLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/SalvarComRequiresNewServiceLocal.java
+END
+TesteTransactionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/dextra_treinamento/!svn/ver/656/trunk/ejb3/andrei/blog_versao_final/ejb/src/main/java/br/com/dextra/treinamento/model/service/transaction/TesteTransactionServiceImpl.java
+END

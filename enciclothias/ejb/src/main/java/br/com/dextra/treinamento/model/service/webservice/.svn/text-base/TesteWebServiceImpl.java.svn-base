@@ -1,0 +1,21 @@
+package br.com.dextra.treinamento.model.service.webservice;
+
+import javax.ejb.Stateless;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+@Stateless
+@WebService(name = "TesteWebServiceImpl",
+	serviceName = "TesteWebServiceImplService",
+	targetNamespace = "http://service.model.treinamento.dextra.com.br",
+	portName = "TesteWebServiceImplPort")
+@SOAPBinding(style = Style.RPC)
+public class TesteWebServiceImpl implements TesteWebServiceInterface {
+
+	@WebMethod
+	public void servicoInvocado() {
+		System.out.println("O servico foi invocado!");
+	}
+}

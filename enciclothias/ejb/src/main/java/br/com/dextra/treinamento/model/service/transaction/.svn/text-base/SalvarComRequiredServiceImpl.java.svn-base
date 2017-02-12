@@ -1,0 +1,23 @@
+package br.com.dextra.treinamento.model.service.transaction;
+
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import br.com.dextra.treinamento.model.domain.Post;
+
+@Stateless
+public class SalvarComRequiredServiceImpl implements SalvarComRequiredServiceLocal {
+
+	@PersistenceContext
+	private EntityManager em;
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void criarPostTransactionRequired(String titulo) {
+		Post novoPost = new Post();
+		novoPost.setTitulo(titulo.toString());
+		em.persist(novoPost);
+	}
+}

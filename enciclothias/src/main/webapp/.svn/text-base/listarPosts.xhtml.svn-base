@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:my="http://java.sun.com/jsf/composite/component">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Blog</title>
+    </h:head>
+    <h:body>
+        <h2>Listagem de posts</h2>
+        
+        <h:form>
+        	<h:dataTable value="#{listarPostsMB.posts}" var="post">
+        		<h:column>
+        			<f:facet name="header">
+        				<h:outputText value="Nome Post" />
+        			</f:facet>
+        			<h:outputText value="#{post.titulo}" />
+        		</h:column>
+        	</h:dataTable>
+        	
+        	<h:commandButton value="Incluir" action="#{listarPostsMB.incluir}" />
+        </h:form>
+    </h:body>
+</html>

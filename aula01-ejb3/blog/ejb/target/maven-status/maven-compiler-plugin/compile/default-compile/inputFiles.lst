@@ -1,0 +1,11 @@
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/PostManagerRemote.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/PostManagerLocal.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/interceptor/LoginInterceptor.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/jpa/PostServiceLocal.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TestarStatefulLocal.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TestarStatelessBean.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TestarStatefulBean.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/TestarStatelessLocal.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/sessionbean/PostManagerBean.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/domain/Post.java
+/home/diego/ejb3/curso_java_web/aula01-ejb3/blog/ejb/src/main/java/br/com/dextra/treinamento/model/service/jpa/PostServiceBean.java

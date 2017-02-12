@@ -1,0 +1,11 @@
+br/com/dextra/treinamento/model/service/sessionbean/TestarStatelessLocal.class
+br/com/dextra/treinamento/model/service/sessionbean/PostManagerBean.class
+br/com/dextra/treinamento/model/service/sessionbean/PostManagerRemote.class
+br/com/dextra/treinamento/model/service/sessionbean/TestarStatefulBean.class
+br/com/dextra/treinamento/model/service/jpa/PostServiceLocal.class
+br/com/dextra/treinamento/model/service/jpa/PostServiceBean.class
+br/com/dextra/treinamento/model/service/sessionbean/PostManagerLocal.class
+br/com/dextra/treinamento/model/service/sessionbean/TestarStatefulLocal.class
+br/com/dextra/treinamento/model/service/sessionbean/TestarStatelessBean.class
+br/com/dextra/treinamento/model/service/interceptor/LoginInterceptor.class
+br/com/dextra/treinamento/model/domain/Post.class

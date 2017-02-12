@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:my="http://java.sun.com/jsf/composite/component">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Blog</title>
+    </h:head>
+    <h:body>
+        <h2>Bem vindo ao blog</h2>
+        
+        <h3>Exemplo JPA</h3>
+        <h:form>
+        	<h:commandButton value="Ver posts" action="#{listarPostsMB.listar}" />
+        </h:form>
+        
+        <h3>Exemplo Stateless x Stateful</h3>
+        <h:form>
+        	<h:commandButton value="Stateless" action="#{testarSessionBeanMB.testarStateless}" />
+        	<h:commandButton value="Stateful" action="#{testarSessionBeanMB.testarStateful}" />
+        </h:form>
+        
+        <h3>Exemplo JMS</h3>
+        <h:form>
+        	<h:commandButton value="Queue" action="#{testarJMS.testarQueue}" />
+        	<h:commandButton value="Topic" action="#{testarJMS.testarTopic}" />
+        </h:form>
+        
+        <h3>Exemplo EJBTimer</h3>
+        <h:form>
+        	<h:commandButton value="Timer" action="#{testarTimerMB.testarTimer}" />
+        </h:form>
+        
+        <h3>Exemplo WebService</h3>
+        <h:form>
+        	<h:commandButton value="Web Service" action="#{testarWebServiceMB.testarWebService}" />
+        </h:form>
+        
+        <h3>Exemplo Interceptor</h3>
+        <h:form>
+        	<h:commandButton value="Interceptor" action="#{testarInterceptorMB.testarInterceptor}" />
+        </h:form>
+        
+        <h3>Exemplo Transaction</h3>
+        <h:form>
+        	<h:commandButton value="Required" action="#{testarTransactionMB.testarRequired}" />
+        	<h:commandButton value="RequiresNew" action="#{testarTransactionMB.testarRequiresNew}" />
+        </h:form>
+        
+        <h3>Exemplo JAAS</h3>
+        <h:form>
+        	<h:commandButton value="Pagina com redirect" action="#{testarJAASMB.testarComRedirect}" />
+        	<h:commandButton value="Pagina sem redirect" action="#{testarJAASMB.testarSemRedirect}" />
+        	<h:commandButton value="Pagina sem redirect" action="#{testarJAASMB.testarSemRedirectRolesAllowed}" />
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,23 @@
+package br.com.dextra.treinamento.controller.bean;
+
+import java.util.Calendar;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import br.com.dextra.treinamento.model.service.timer.TesteTimerServiceLocal;
+
+@ManagedBean(name = "testarTimerMB")
+@SessionScoped
+public class TestarTimerMB {
+
+	@EJB
+	private TesteTimerServiceLocal testeEJBTimerService;
+	
+	public void testarTimer() {
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.MINUTE, 2);
+		testeEJBTimerService.scheduleExecution(cal.getTime(), "Mensagem a ser exibida");
+	}
+}

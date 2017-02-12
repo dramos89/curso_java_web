@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:my="http://java.sun.com/jsf/composite/component">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Blog</title>
+    </h:head>
+    <h:body>
+        <h2>Bem vindo ao blog</h2>
+        
+	        <h3>Exemplo JPA - Blog</h3>
+	        <h:form>
+	        	<h:commandButton value="Ver posts" action="#{listarPostsMB.listar}" />
+	        </h:form>
+	        <h3>Stateless x Stateful</h3>
+	        <h:form>
+	        	<h:commandButton value="testar stateless" action="#{testarSessionBeanMB.testarStateless}" update = "contador"  />
+	        	<h:commandButton value="testar stateful" action="#{testarSessionBeanMB.testarStateful}" update = "contador" />
+	        	
+	        	<h:outputLabel id = "contador" value = "#{testarSessionBeanMB.contador}"></h:outputLabel>
+	        </h:form>
+	        
+    </h:body>
+</html>
