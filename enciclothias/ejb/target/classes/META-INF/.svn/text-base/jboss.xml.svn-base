@@ -1,3 +1,0 @@
-<jboss>
-	<security-domain>java:/jaas/blog_policy</security-domain>
-</jboss>

@@ -19,7 +19,8 @@
         <jta-data-source>java:DefaultDS</jta-data-source>
         
 <!--         Add all your other mapped classes, for example: -->
-        <class>br.com.dextra.treinamento.model.domain.Post</class>
+        <class>pk.com.proj.enciclothias.model.domain.Post</class>
+        <class>pk.com.proj.enciclothias.model.domain.Verbete</class>
         <properties>
             <property name="hibernate.archive.autodetecion" value="class, hbm" />
             <property name="hibernate.show_sql" value="true"/>

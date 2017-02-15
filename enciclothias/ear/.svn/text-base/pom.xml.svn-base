@@ -2,26 +2,26 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<parent>
-		<groupId>br.com.dextra.treinamento</groupId>
+		<groupId>pk.com.proj.enciclothias</groupId>
 		<artifactId>blog</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.dextra.treinamento</groupId>
+	<groupId>pk.com.proj.enciclothias</groupId>
 	<artifactId>blog-ear</artifactId>
 	<name>Blog Application Ear</name>
 	<packaging>ear</packaging>
 
 	<dependencies>
 		<dependency>
-			<groupId>br.com.dextra.treinamento</groupId>
+			<groupId>pk.com.proj.enciclothias</groupId>
 			<artifactId>blog-ejb</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
-			<groupId>br.com.dextra.treinamento</groupId>
+			<groupId>pk.com.proj.enciclothias</groupId>
 			<artifactId>blog-war</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<type>war</type>
@@ -40,11 +40,11 @@
 					</archive>
 					<modules>
 						<ejbModule>
-							<groupId>br.com.dextra.treinamento</groupId>
+							<groupId>pk.com.proj.enciclothias</groupId>
 							<artifactId>blog-ejb</artifactId>
 						</ejbModule>
 						<webModule>
-							<groupId>br.com.dextra.treinamento</groupId>
+							<groupId>pk.com.proj.enciclothias</groupId>
 							<artifactId>blog-war</artifactId>
 							<context-root>blog</context-root>
 						</webModule>
